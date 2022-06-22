@@ -1,0 +1,479 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local main = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local UICorner = Instance.new("UICorner")
+local scroll = Instance.new("ScrollingFrame")
+local iyButton = Instance.new("TextButton")
+local tpButton = Instance.new("TextButton")
+local flingButton = Instance.new("TextButton")
+local btoolsButton = Instance.new("TextButton")
+local chathaxButton = Instance.new("TextButton")
+local bypassButton = Instance.new("TextButton")
+local fakekickButton = Instance.new("TextButton")
+local f3xButton = Instance.new("TextButton")
+local meepButton = Instance.new("TextButton")
+local c00lkidButton = Instance.new("TextButton")
+local sauceadminButton = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local TextButton = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+main.Name = "main"
+main.Parent = ScreenGui
+main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+main.Position = UDim2.new(0.0110584497, 0, 0.602368891, 0)
+main.Size = UDim2.new(0, 395, 0, 218)
+local UIS = game:GetService('UserInputService')
+local frame = script.Parent
+local dragToggle = nil
+local dragSpeed = 0.25
+local dragStart = nil
+local startPos = nil
+
+TextLabel.Parent = main
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.Size = UDim2.new(0, 328, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Sauce's Trolling GUI 1.0"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+UICorner.Parent = TextLabel
+
+scroll.Name = "scroll"
+scroll.Parent = main
+scroll.Active = true
+scroll.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+scroll.BorderColor3 = Color3.fromRGB(27, 42, 53)
+scroll.BorderSizePixel = 0
+scroll.Position = UDim2.new(0, 0, 0.229357794, 0)
+scroll.Size = UDim2.new(0, 395, 0, 161)
+
+iyButton.Name = "iyButton"
+iyButton.Parent = scroll
+iyButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+iyButton.Position = UDim2.new(0.311392426, 0, 0.0137614682, 0)
+iyButton.Size = UDim2.new(0, 123, 0, 47)
+iyButton.Font = Enum.Font.SourceSans
+iyButton.Text = "Infinite Yield"
+iyButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+iyButton.TextScaled = true
+iyButton.TextSize = 14.000
+iyButton.TextWrapped = true
+iyButton.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+tpButton.Name = "tpButton"
+tpButton.Parent = scroll
+tpButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+tpButton.Position = UDim2.new(0.622784853, 0, 0.0137614682, 0)
+tpButton.Size = UDim2.new(0, 123, 0, 47)
+tpButton.Font = Enum.Font.SourceSans
+tpButton.Text = "Click to TP"
+tpButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+tpButton.TextScaled = true
+tpButton.TextSize = 14.000
+tpButton.TextWrapped = true
+tpButton.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet('https://pastebin.com/raw/GuBiX19e'))
+end)
+
+flingButton.Name = "flingButton"
+flingButton.Parent = scroll
+flingButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+flingButton.Position = UDim2.new(-0.00253158598, 0, 0.121559635, 0)
+flingButton.Size = UDim2.new(0, 123, 0, 47)
+flingButton.Font = Enum.Font.SourceSans
+flingButton.Text = "Fling"
+flingButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+flingButton.TextScaled = true
+flingButton.TextSize = 14.000
+flingButton.TextWrapped = true
+flingButton.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet('https://pastebin.com/raw/r97d7dS0', true))()
+end)
+
+btoolsButton.Name = "btoolsButton"
+btoolsButton.Parent = scroll
+btoolsButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+btoolsButton.Position = UDim2.new(0.308860809, 0, 0.121559635, 0)
+btoolsButton.Size = UDim2.new(0, 123, 0, 47)
+btoolsButton.Font = Enum.Font.SourceSans
+btoolsButton.Text = "BTools"
+btoolsButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+btoolsButton.TextScaled = true
+btoolsButton.TextSize = 14.000
+btoolsButton.TextWrapped = true
+btoolsButton.MouseButton1Click:Connect(function()
+	local player = game.Players.LocalPlayer
+	local mouse = player:GetMouse()
+
+
+	for item = 1, 4 do
+		HopperBin = Instance.new("HopperBin", game.Players.LocalPlayer.Backpack)
+		HopperBin.BinType = item
+	end
+end)
+
+chathaxButton.Name = "chathaxButton"
+chathaxButton.Parent = scroll
+chathaxButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+chathaxButton.Position = UDim2.new(0.620253205, 0, 0.121559635, 0)
+chathaxButton.Size = UDim2.new(0, 123, 0, 47)
+chathaxButton.Font = Enum.Font.SourceSans
+chathaxButton.Text = "ChatHax"
+chathaxButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+chathaxButton.TextScaled = true
+chathaxButton.TextSize = 14.000
+chathaxButton.TextWrapped = true
+chathaxButton.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/ant-7802/--/main/straightmilk.lua'))()
+end)
+
+bypassButton.Name = "bypassButton"
+bypassButton.Parent = scroll
+bypassButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+bypassButton.Position = UDim2.new(5.96046448e-08, 0, 0.229357809, 0)
+bypassButton.Size = UDim2.new(0, 123, 0, 47)
+bypassButton.Font = Enum.Font.SourceSans
+bypassButton.Text = "Chat Bypass"
+bypassButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+bypassButton.TextScaled = true
+bypassButton.TextSize = 14.000
+bypassButton.TextWrapped = true
+bypassButton.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet("https://the-shed.xyz/roblox/scripts/ChatBypass", true))()
+end)
+
+fakekickButton.Name = "fakekickButton"
+fakekickButton.Parent = scroll
+fakekickButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+fakekickButton.Position = UDim2.new(0.311392456, 0, 0.229357809, 0)
+fakekickButton.Size = UDim2.new(0, 123, 0, 47)
+fakekickButton.Font = Enum.Font.SourceSans
+fakekickButton.Text = "Fake Kick"
+fakekickButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+fakekickButton.TextScaled = true
+fakekickButton.TextSize = 14.000
+fakekickButton.TextWrapped = true
+fakekickButton.MouseButton1Click:Connect(function()
+	local Players = game.Players
+	Players.PlayerRemoving:Connect(function(player)
+		-- Script generated by SimpleSpy - credits to exx#9394
+
+		local args = {
+			[1] = ":kick "..player.Name,
+			[2] = "All"
+		}
+
+		game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+		-- Script generated by SimpleSpy - credits to exx#9394
+
+		local args = {
+			[1] = "[PENDULUM HUB ADMIN]: Player "..player.Name.. " has been kicked!",
+			[2] = "All"
+		}
+
+		game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(unpack(args))
+	end)
+	print[[Made by Tescalus don't believe anyone who tells you otherwise!]]
+end)
+
+f3xButton.Name = "f3xButton"
+f3xButton.Parent = scroll
+f3xButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+f3xButton.Position = UDim2.new(0.622784853, 0, 0.229357809, 0)
+f3xButton.Size = UDim2.new(0, 123, 0, 47)
+f3xButton.Font = Enum.Font.SourceSans
+f3xButton.Text = "F3x"
+f3xButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+f3xButton.TextScaled = true
+f3xButton.TextSize = 14.000
+f3xButton.TextWrapped = true
+f3xButton.MouseButton1Click:Connect(function()
+	game.StarterGui:SetCore("SendNotification",  {
+		Title = "Sauce's Trolling GUI";
+		Text = "F3X is not avalible right now. Use BTools insteadl";
+		Icon = "";
+		Duration = 5;
+		Button1 = "Okay";
+	})
+end)
+
+meepButton.Name = "meepButton"
+meepButton.Parent = scroll
+meepButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+meepButton.Position = UDim2.new(5.96046448e-08, 0, 0.337155968, 0)
+meepButton.Size = UDim2.new(0, 123, 0, 47)
+meepButton.Font = Enum.Font.SourceSans
+meepButton.Text = "Meep City Destroyer"
+meepButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+meepButton.TextScaled = true
+meepButton.TextSize = 14.000
+meepButton.TextWrapped = true
+meepButton.MouseButton1Click:Connect(function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/synolope/meepcracked/main/loader.lua'))()
+end)
+
+c00lkidButton.Name = "c00lkidButton"
+c00lkidButton.Parent = scroll
+c00lkidButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+c00lkidButton.Position = UDim2.new(0.306329161, 0, 0.337155968, 0)
+c00lkidButton.Size = UDim2.new(0, 123, 0, 47)
+c00lkidButton.Font = Enum.Font.SourceSans
+c00lkidButton.Text = "C00lkid Script Hub"
+c00lkidButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+c00lkidButton.TextScaled = true
+c00lkidButton.TextSize = 14.000
+c00lkidButton.TextWrapped = true
+c00lkidButton.MouseButton1Click:Connect(function()
+	loadstring(game:GetObjects("rbxassetid://8127297852")[1].Source)()
+end)
+
+sauceadminButton.Name = "sauceadminButton"
+sauceadminButton.Parent = scroll
+sauceadminButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+sauceadminButton.Position = UDim2.new(0, 0, 0.0137614682, 0)
+sauceadminButton.Size = UDim2.new(0, 123, 0, 47)
+sauceadminButton.Font = Enum.Font.SourceSans
+sauceadminButton.Text = "Invisibility (Press E to toggle)"
+sauceadminButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+sauceadminButton.TextScaled = true
+sauceadminButton.TextSize = 14.000
+sauceadminButton.TextWrapped = true
+sauceadminButton.MouseButton1Click:Connect(function()
+	--[[Invisibility Toggle
+
+You can find the orginal concept here: https://v3rmillion.net/showthread.php?tid=544634
+
+This method clones the character locally, teleports the real character to a safe location, then sets the character to the clone.
+Basically, your real character is in the sky while you are on the ground.
+
+
+Because of the way this works, games with a decent anti-cheat will fuck this up.
+If you turn it off, you have to go to a safe place before going invisible.
+
+Written by: BitingTheDust ; https://v3rmillion.net/member.php?action=profile&uid=1628149
+]]
+	--Settings:
+	local ScriptStarted = false
+	local Keybind = "E" --Set to whatever you want, has to be the name of a KeyCode Enum.
+	local Transparency = true --Will make you slightly transparent when you are invisible. No reason to disable.
+	local NoClip = false --Will make your fake character no clip.
+
+	local Player = game:GetService("Players").LocalPlayer
+	local RealCharacter = Player.Character or Player.CharacterAdded:Wait()
+
+	local IsInvisible = false
+
+	RealCharacter.Archivable = true
+	local FakeCharacter = RealCharacter:Clone()
+	local Part
+	Part = Instance.new("Part", workspace)
+	Part.Anchored = true
+	Part.Size = Vector3.new(200, 1, 200)
+	Part.CFrame = CFrame.new(0, -500, 0) --Set this to whatever you want, just far away from the map.
+	Part.CanCollide = true
+	FakeCharacter.Parent = workspace
+	FakeCharacter.HumanoidRootPart.CFrame = Part.CFrame * CFrame.new(0, 5, 0)
+
+	for i, v in pairs(RealCharacter:GetChildren()) do
+		if v:IsA("LocalScript") then
+			local clone = v:Clone()
+			clone.Disabled = true
+			clone.Parent = FakeCharacter
+		end
+	end
+	if Transparency then
+		for i, v in pairs(FakeCharacter:GetDescendants()) do
+			if v:IsA("BasePart") then
+				v.Transparency = 0.7
+			end
+		end
+	end
+	local CanInvis = true
+	function RealCharacterDied()
+		CanInvis = false
+		RealCharacter:Destroy()
+		RealCharacter = Player.Character
+		CanInvis = true
+		isinvisible = false
+		FakeCharacter:Destroy()
+		workspace.CurrentCamera.CameraSubject = RealCharacter.Humanoid
+
+		RealCharacter.Archivable = true
+		FakeCharacter = RealCharacter:Clone()
+		Part:Destroy()
+		Part = Instance.new("Part", workspace)
+		Part.Anchored = true
+		Part.Size = Vector3.new(200, 1, 200)
+		Part.CFrame = CFrame.new(9999, 9999, 9999) --Set this to whatever you want, just far away from the map.
+		Part.CanCollide = true
+		FakeCharacter.Parent = workspace
+		FakeCharacter.HumanoidRootPart.CFrame = Part.CFrame * CFrame.new(0, 5, 0)
+
+		for i, v in pairs(RealCharacter:GetChildren()) do
+			if v:IsA("LocalScript") then
+				local clone = v:Clone()
+				clone.Disabled = true
+				clone.Parent = FakeCharacter
+			end
+		end
+		if Transparency then
+			for i, v in pairs(FakeCharacter:GetDescendants()) do
+				if v:IsA("BasePart") then
+					v.Transparency = 0.7
+				end
+			end
+		end
+		RealCharacter.Humanoid.Died:Connect(function()
+			RealCharacter:Destroy()
+			FakeCharacter:Destroy()
+		end)
+		Player.CharacterAppearanceLoaded:Connect(RealCharacterDied)
+	end
+	RealCharacter.Humanoid.Died:Connect(function()
+		RealCharacter:Destroy()
+		FakeCharacter:Destroy()
+	end)
+	Player.CharacterAppearanceLoaded:Connect(RealCharacterDied)
+	local PseudoAnchor
+	game:GetService "RunService".RenderStepped:Connect(
+		function()
+			if PseudoAnchor ~= nil then
+				PseudoAnchor.CFrame = Part.CFrame * CFrame.new(0, 5, 0)
+			end
+			if NoClip then
+				FakeCharacter.Humanoid:ChangeState(11)
+			end
+		end
+	)
+
+	PseudoAnchor = FakeCharacter.HumanoidRootPart
+	local function Invisible()
+		if IsInvisible == false then
+			local StoredCF = RealCharacter.HumanoidRootPart.CFrame
+			RealCharacter.HumanoidRootPart.CFrame = FakeCharacter.HumanoidRootPart.CFrame
+			FakeCharacter.HumanoidRootPart.CFrame = StoredCF
+			RealCharacter.Humanoid:UnequipTools()
+			Player.Character = FakeCharacter
+			workspace.CurrentCamera.CameraSubject = FakeCharacter.Humanoid
+			PseudoAnchor = RealCharacter.HumanoidRootPart
+			for i, v in pairs(FakeCharacter:GetChildren()) do
+				if v:IsA("LocalScript") then
+					v.Disabled = false
+				end
+			end
+
+			IsInvisible = true
+		else
+			local StoredCF = FakeCharacter.HumanoidRootPart.CFrame
+			FakeCharacter.HumanoidRootPart.CFrame = RealCharacter.HumanoidRootPart.CFrame
+
+			RealCharacter.HumanoidRootPart.CFrame = StoredCF
+
+			FakeCharacter.Humanoid:UnequipTools()
+			Player.Character = RealCharacter
+			workspace.CurrentCamera.CameraSubject = RealCharacter.Humanoid
+			PseudoAnchor = FakeCharacter.HumanoidRootPart
+			for i, v in pairs(FakeCharacter:GetChildren()) do
+				if v:IsA("LocalScript") then
+					v.Disabled = true
+				end
+			end
+			IsInvisible = false
+		end
+	end
+
+	game:GetService("UserInputService").InputBegan:Connect(
+	function(key, gamep)
+		if gamep then
+			return
+		end
+		if key.KeyCode.Name:lower() == Keybind:lower() and CanInvis and RealCharacter and FakeCharacter then
+			if RealCharacter:FindFirstChild("HumanoidRootPart") and FakeCharacter:FindFirstChild("HumanoidRootPart") then
+				Invisible()
+			end
+		end
+	end
+	)
+	local Sound = Instance.new("Sound",game:GetService("SoundService"))
+	Sound.SoundId = "rbxassetid://232127604"
+	Sound:Play()
+	game:GetService("StarterGui"):SetCore("SendNotification",{["Title"] = "Invisible Toggle Loaded",["Text"] = "Press "..Keybind.." to become change visibility.",["Duration"] = 20,["Button1"] = "Okay."})
+end)
+
+UICorner_2.Parent = main
+
+TextButton.Parent = main
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.Position = UDim2.new(0.858227849, 0, 0.0366972461, 0)
+TextButton.Size = UDim2.new(0, 47, 0, 42)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Respawn"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+TextButton.MouseButton1Click:Connect(function()
+	local a1 = Instance.new("Model", workspace)
+	local a2 = Instance.new("Part", a1)
+	a2.CanCollide = true
+	a2.Anchored = true
+	a2.CFrame = CFrame.new(10000, 10000, 10000)
+	a2.Name = "Torso"
+	local a3 = Instance.new("Humanoid", a1)
+	a3.MaxHealth=100;a3.Health=100
+	game.Players.LocalPlayer.Character = a1
+	a3.Health=0
+end)
+
+UICorner_3.Parent = TextButton
+
+local UIS = game:GetService('UserInputService')
+local frame = main
+local dragToggle = nil
+local dragSpeed = 0.25
+local dragStart = nil
+local startPos = nil
+
+local function updateInput(input)
+	local delta = input.Position - dragStart
+	local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+		startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+	game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+end
+
+frame.InputBegan:Connect(function(input)
+	if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+		dragToggle = true
+		dragStart = input.Position
+		startPos = frame.Position
+		input.Changed:Connect(function()
+			if input.UserInputState == Enum.UserInputState.End then
+				dragToggle = false
+			end
+		end)
+	end
+end)
+
+UIS.InputChanged:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+		if dragToggle then
+			updateInput(input)
+		end
+	end
+end)
