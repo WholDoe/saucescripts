@@ -12,8 +12,7 @@ local WelcomeSection = TabWelcome:NewSection("Welcome")
 local ScriptsSection = TabScripts:NewSection("Scripts")
 
 -- // Welcome Tab \\ --
-WelcomeSection:NewLabel("Welcome to Life in Paradise Trolling Gui!")
-WelcomeSection:NewLabel("(i couldnt come up with a better name lol)")
+WelcomeSection:NewLabel("Welcome to Anti Oder Trolling Gui!")
 
 -- // Player Tab \\ -- 
 PlayerSection:NewSlider("Speed", "Changes your walk speed.", 250, 0, function(s)
