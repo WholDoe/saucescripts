@@ -1,0 +1,50 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Life in Paradise Trolling Gui", "Ocean")
+
+-- // Tabs \\ --
+local TabWelcome = Window:NewTab("Welcome")
+local TabPlayer = Window:NewTab("Player")
+local TabScripts = Window:NewTab("Scripts")
+
+-- // Sections \\ --
+local PlayerSection = TabPlayer:NewSection("Player")
+local WelcomeSection = TabWelcome:NewSection("Welcome")
+local ScriptsSection = TabScripts:NewSection("Scripts")
+
+-- // Welcome Tab \\ --
+WelcomeSection:NewLabel("Welcome to Life in Paradise Trolling Gui!")
+WelcomeSection:NewLabel("(i couldnt come up with a better name lol)")
+
+-- // Player Tab \\ -- 
+PlayerSection:NewSlider("Speed", "Changes your walk speed.", 250, 0, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+PlayerSection:NewSlider("Jump Power", "Changes your jump power.", 250, 0, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+PlayerSection:NewTextBox("Teleport to", "Teleports you to the player of your choosing.", function(txt)
+	local Target = game.Players:FindFirstChild(txt)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Target.Character.HumanoidRootPart.CFrame
+end)
+-- // Scripts Tab \\ --
+ScriptsSection:NewButton("FE ChatHax V2", "Loads the FE ChatHax V2 script.", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/ant-7802/--/main/straightmilk.lua'))()
+end)
+ScriptsSection:NewButton("Infinite Yield", "Loads the Infinite Yield script.", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+ScriptsSection:NewButton("CMD-X Admin", "Loads the CMD-X script.", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
+end)
+ScriptsSection:NewButton("Chat Bypass", "Loads the Chat Bypass script.", function()
+    loadstring(game:HttpGet("https://the-shed.xyz/roblox/scripts/ChatBypass", true))()
+end)
+ScriptsSection:NewButton("Fling GUI", "Loads the Fling GUI script.", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/r97d7dS0', true))()
+end)
+ScriptsSection:NewButton("Revis Admin", "Loads the Reviz Admin script.", function()
+    loadstring(game:HttpGet('https://pastebin.com/raw/9dsrirD5', true))()
+end)
+ScriptsSection:NewButton("C00lGui", "Loads the C00lGui script.", function()
+    loadstring(game:GetObjects("rbxassetid://9827584846")[1].Source)()
+end)
