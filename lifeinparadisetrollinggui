@@ -51,5 +51,5 @@ ScriptsSection:NewButton("Fates FE Admin", "Loads the Fates FE Admin script.", f
     loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))()
 end)
 ScriptsSection:NewButton("Head Fling GUI", "Loads the Head Fling GUI script.", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))()
+    loadstring(game:HttpGet("https://pastebin.com/raw/BK4Q0DfU"))()
 end)
