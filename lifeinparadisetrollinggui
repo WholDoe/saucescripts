@@ -21,11 +21,7 @@ end)
 PlayerSection:NewSlider("Jump Power", "Changes your jump power.", 500, 0, function(s)
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
 end)
-PlayerSection:NewTextBox("Teleport to", "Teleports you to the player of your choosing.", function(txt)
-	local Target = game.Players:FindFirstChild(txt)
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Target.Character.HumanoidRootPart.CFrame
-end)
-PlayerSection:NewSlider("Cash", "Gives you the amount of cash you want. (Only works for some games)", 9,999,999,999,999, 0, function(s)
+PlayerSection:NewSlider("Cash", "Gives you the amount of cash you want. (Only works for some games)", 9999999999999, 0, function(s)
 	local args = {
    	 [1] = s
 	}
