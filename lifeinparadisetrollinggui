@@ -25,6 +25,13 @@ PlayerSection:NewTextBox("Teleport to", "Teleports you to the player of your cho
 	local Target = game.Players:FindFirstChild(txt)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = Target.Character.HumanoidRootPart.CFrame
 end)
+PlayerSection:NewSlider("Cash", "Gives you the amount of cash you want. (Only works for some games)", 9,999,999,999,999, 0, function(s)
+	local args = {
+   	 [1] = s
+	}
+	game:GetService("ReplicatedStorage").money:FireServer(unpack(args))
+end)
+
 -- // Scripts Tab \\ --
 ScriptsSection:NewButton("FE ChatHax V2", "Loads the FE ChatHax V2 script.", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/ant-7802/--/main/straightmilk.lua'))()
